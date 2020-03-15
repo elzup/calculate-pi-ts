@@ -1,3 +1,4 @@
+const sum = (a: number, b: number) => a + b;
 const multiple = (a: number, b: number) => a * b;
 const range0 = (n: number) => [...Array(n).keys()];
 const range = (n: number) => {
@@ -20,7 +21,11 @@ const chudnovskySig = (n: number) =>
   (factorialMemo(3 * n) * factorialMemo(n) ** 3 * C ** n);
 
 export function chudnovsky(t: number) {
+  const c2 = 12 / Math.sqrt(C);
   const res =
-    (12 / Math.sqrt(C)) * range0(t).reduce((p, i) => p + chudnovskySig(i), 0);
+    c2 *
+    range0(t)
+      .map(chudnovskySig)
+      .reduce(sum);
   return 1 / res;
 }
