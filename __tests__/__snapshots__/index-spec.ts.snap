@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should have Greeter available 1`] = `3.1415926535897936`;
