@@ -11,25 +11,20 @@
   "main": "lib/index",
   "types": "lib/index",
   "scripts": {
-    "prepublishOnly": "npm run build",
-    "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
-    "build": "tsc --pretty",
-    "test": "jest",
-    "coverage": "jest --coverage",
-    "watch": "npm run build -- --watch",
-    "watch:test": "jest --watch"
+    "test": "jest"
   },
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^25.1.4",
     "@types/node": "^13.9.1",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
     "coveralls": "^3.0.2",
+    "eslint": "^6.8.0",
     "jest": "^25.1.0",
     "prettier": "^1.19.1",
     "ts-jest": "^25.2.1",
     "ts-node": "^8.6.2",
-    "tslint": "^6.1.0",
-    "tslint-config-prettier": "^1.15.0",
     "typescript": "^3.1.1"
   },
   "engines": {
